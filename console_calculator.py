@@ -62,7 +62,7 @@ def solve(formula):
                 if (eval(y_test)+0.5 > eval(right_side)) and (eval(y_test)-0.5 < eval(right_side)):
                     format_float = "{:.2f}".format(i)
                     print("Estimated solution is y=" + format_float)
-                    return (None, format_float)
+                    return (0, format_float)
             print("Unable to solve equation")
     elif bool(x_match):
         for i in np.linspace(0,1000,2000):
@@ -71,7 +71,7 @@ def solve(formula):
             if (eval(x_test)+0.5 > eval(right_side)) and (eval(x_test)-0.5 < eval(right_side)):
                     format_float = "{:.2f}".format(i)
                     print("Estimated solution is x=" + format_float)
-                    return (format_float, None) 
+                    return (format_float, 0) 
         print("Unable to solve equation")
 
 """
